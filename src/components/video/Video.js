@@ -14,7 +14,7 @@ export default function Video({video}){
     const {data: quizGiven, isSuccess, isLoading: quizloading } = useGetQuizMarkByVideoIdAndStudentIdQuery({videoId: id, studentId: userId}) || {};
     const {data: assignments, isLoading: isAssignmentLoaded, isError: assignmentsError} = useGetAssignmentsByVideoIdQuery(id);
     const {data: assignmentGiven, isSuccess:assignmentSuccess } = useGetAssignmentMarkByAssignmentIdAndStudentIdQueryQuery({assignmentId: assignments?.[0]?.id, studentId: userId}) || {};
-    console.log('herere ' ,assignments, assignmentGiven, quizzes, quizGiven, quizloading);
+
     return (
         <div class="col-span-full w-full space-y-8 lg:col-span-2">
             <iframe width="100%" class="aspect-video" src={url}

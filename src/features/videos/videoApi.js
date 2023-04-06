@@ -9,7 +9,7 @@ export const videoApi = apiSlice.injectEndpoints({
             query: () => `/videos?_sort=createdAt&_order=asc&_limit=1`,
           }),
           getAllVideos: builder.query({
-            query: () => `/videosc`,
+            query: () => `/videos?_sort=createdAt&_order=asc`,
           }),
           getAllVideosExceptFetched: builder.query({
             query: (id) => `/videos?_sort=createdAt&_order=asc&id_ne=${id}`,

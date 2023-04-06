@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 export default function RelatedVideos({videos, videoId}){
 
     let content = null;
-    console.log(videos, videoId);
+    console.log(videos, videoId, ' hello');
 
     if(videos?.length>0){
         content = videos.map(video=>{
-            console.log(video);
+
             return (
                 <div class={`w-full flex flex-row gap-2 cursor-pointer hover:bg-slate-900 p-2 py-3 ${video.id==videoId ?'bg-red-600':''}`}>
                     <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">

@@ -11,7 +11,7 @@ export default function VideoPlayer(){
     const {id} = useParams() || {};    
     const {data: video, isLoading, isError, error} = useGetFirstVideoQuery();
     const {data: videos, isLoading: listLoading, isError: isListError } = useGetAllVideosQuery();
-    // console.log(video);
+    console.log(video?.[0], videos);
     const {id: videoId } = video || {};
     let content = null;
     if(isLoading){
