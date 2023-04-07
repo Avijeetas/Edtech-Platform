@@ -9,8 +9,8 @@ export default function RelatedVideos({videos, videoId}){
         content = videos.map(video=>{
 
             return (
-                <div class={`w-full flex flex-row gap-2 cursor-pointer hover:bg-slate-900 p-2 py-3 ${video.id==videoId ?'bg-red-600':''}`}>
-                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <div className={`w-full flex flex-row gap-2 cursor-pointer hover:bg-slate-900 p-2 py-3 ${video.id==videoId ?'bg-red-600':''}`}>
+                    <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -18,12 +18,12 @@ export default function RelatedVideos({videos, videoId}){
                     </svg>
                     <div clas="flex flex-col w-full">
                         <Link to={`/video/${video.id}`}>
-                            <p class="text-slate-50 text-sm font-medium">{video.title}</p>
+                            <p className="text-slate-50 text-sm font-medium">{video.title}</p>
                         </Link>
                         <div>
-                            <span class="text-gray-400 text-xs mt-1">{video.duration}</span>
-                            <span class="text-gray-400 text-xs mt-1"> | </span>
-                            <span class="text-gray-400 text-xs mt-1">{video.views} views</span>
+                            <span className="text-gray-400 text-xs mt-1">{video.duration}</span>
+                            <span className="text-gray-400 text-xs mt-1"> | </span>
+                            <span className="text-gray-400 text-xs mt-1">{video.views} views</span>
                         </div>
                     </div>
                 </div>
@@ -32,7 +32,7 @@ export default function RelatedVideos({videos, videoId}){
     }
     return (
         <div
-        class="col-span-full lg:col-auto max-h-[570px] overflow-y-auto bg-secondary p-4 rounded-md border border-slate-50/10 divide-y divide-slate-600/30">
+        className="col-span-full lg:col-auto max-h-[570px] overflow-y-auto bg-secondary p-4 rounded-md border border-slate-50/10 divide-y divide-slate-600/30">
             {content}
 
     </div>

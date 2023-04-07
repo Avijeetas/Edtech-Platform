@@ -52,7 +52,7 @@ export default function Assignment(){
         <>
             <Navbar/>
             
-            <section class="py-6 bg-primary">
+            <section className="py-6 bg-primary">
                 <div className="mx-auto max-w-7xl px-5 lg:px-0">
                     <div className="mb-8">
                         <h1 className="text-2xl font-bold">{assignments?.title}</h1>

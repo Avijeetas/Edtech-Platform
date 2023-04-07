@@ -39,15 +39,15 @@ export default function AddVideo(){
     return (
         <>
             <Navbar />
-            <div class="container relative">
-                <main class="relative z-20 max-w-3xl mx-auto rounded-lg xl:max-w-none">
-                    <h1 class="mt-4 mb-8 text-3xl font-bold text-center">
+            <div className="container relative">
+                <main className="relative z-20 max-w-3xl mx-auto rounded-lg xl:max-w-none">
+                    <h1 className="mt-4 mb-8 text-3xl font-bold text-center">
                     {formTitle}
                     </h1>
 
-                    <div class="justify-center  mb-2 space-y-2 ">
-                        <form class="space-y-6" onSubmit={handleSubmit}>
-                            <div class="fieldContainer">
+                    <div className="justify-center  mb-2 space-y-2 ">
+                        <form className="space-y-6" onSubmit={handleSubmit}>
+                            <div className="fieldContainer">
                             <label for="lws-taskName">Title</label>
                             <input
                                 type="text"
@@ -58,7 +58,7 @@ export default function AddVideo(){
                                 onChange={e=>setTitle(e.target.value)}
                             />
                             </div>
-                            <div class="fieldContainer">
+                            <div className="fieldContainer">
                                 <label for="lws-description">Duration</label>
                                 <input 
                                     name="duration" 
@@ -70,7 +70,7 @@ export default function AddVideo(){
                             </div>
 
 
-                            <div class="fieldContainer">
+                            <div className="fieldContainer">
                             <label for="lws-taskName">Url</label>
                             <input
                                 type="text"
@@ -81,7 +81,7 @@ export default function AddVideo(){
                                 onChange={e=>setUrl(e.target.value)}
                             />
                             </div>
-                            <div class="fieldContainer">
+                            <div className="fieldContainer">
                             <label for="lws-taskName">Views</label>
                             <input
                                 type="text"
@@ -93,7 +93,7 @@ export default function AddVideo(){
                             />
                             </div>
                         
-                            <div class="fieldContainer text-black">
+                            <div className="fieldContainer text-black">
                                 <label for="lws-description">Description</label>
                                 <textarea 
                                     name="description" 
@@ -106,8 +106,8 @@ export default function AddVideo(){
                                 ></textarea>
                             </div>
 
-                            <div class="text-right float-right">
-                                <button type="submit" class="lws-submit">
+                            <div className="text-right float-right">
+                                <button type="submit" className="lws-submit">
                                     Save
                                 </button>
                             </div>

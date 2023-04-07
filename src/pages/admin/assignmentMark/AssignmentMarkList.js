@@ -25,27 +25,27 @@ export default function AssignmentMarkList(){
     return (
         <>
             <Navbar />
-            <section class="py-6 bg-primary">
-                <div class="mx-auto max-w-full px-5 lg:px-20">
-                    <div class="px-3 py-20 bg-opacity-10">
-                        <ul class="assignment-status">
+            <section className="py-6 bg-primary">
+                <div className="mx-auto max-w-full px-5 lg:px-20">
+                    <div className="px-3 py-20 bg-opacity-10">
+                        <ul className="assignment-status">
                             <li>Total <span>{parseInt(published)+parseInt(pending)}</span></li>
                             <li>Pending <span>{pending}</span></li>
                             <li>Mark Sent <span>{published}</span></li>
                         </ul>
-                        <div class="overflow-x-auto mt-4">
-                            <table class="divide-y-1 text-base divide-gray-600 w-full">
+                        <div className="overflow-x-auto mt-4">
+                            <table className="divide-y-1 text-base divide-gray-600 w-full">
                                 <thead>
                                     <tr>
-                                        <th class="table-th">Assignment</th>
-                                        <th class="table-th">Date</th>
-                                        <th class="table-th">Student Name</th>
-                                        <th class="table-th">Repo Link</th>
-                                        <th class="table-th">Mark</th>
+                                        <th className="table-th">Assignment</th>
+                                        <th className="table-th">Date</th>
+                                        <th className="table-th">Student Name</th>
+                                        <th className="table-th">Repo Link</th>
+                                        <th className="table-th">Mark</th>
                                     </tr>
                                 </thead>
 
-                                <tbody class="divide-y divide-slate-600/50">
+                                <tbody className="divide-y divide-slate-600/50">
                                     {content}
 
                                 </tbody>

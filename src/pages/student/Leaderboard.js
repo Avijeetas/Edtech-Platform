@@ -80,32 +80,32 @@ export default function Leaderboard(){
      return (
         <>  
             <Navbar/>
-            <section class="py-6 bg-primary">
-                <div class="mx-auto max-w-7xl px-5 lg:px-0">
+            <section className="py-6 bg-primary">
+                <div className="mx-auto max-w-7xl px-5 lg:px-0">
                     {
                         data?.length>0 &&
                         <div>
-                        <h3 class="text-lg font-bold">Your Position in Leaderboard</h3>
-                        <table class="text-base w-full border border-slate-600/50 rounded-md my-4">
+                        <h3 className="text-lg font-bold">Your Position in Leaderboard</h3>
+                        <table className="text-base w-full border border-slate-600/50 rounded-md my-4">
                             <thead>
                            
                                 <tr>
-                                <th class="table-th !text-center">Rank</th>
-                                <th class="table-th !text-center">Name</th>
-                                <th class="table-th !text-center">Quiz Mark</th>
-                                <th class="table-th !text-center">Assignment Mark</th>
-                                <th class="table-th !text-center">Total</th>
+                                <th className="table-th !text-center">Rank</th>
+                                <th className="table-th !text-center">Name</th>
+                                <th className="table-th !text-center">Quiz Mark</th>
+                                <th className="table-th !text-center">Assignment Mark</th>
+                                <th className="table-th !text-center">Total</th>
                             </tr>
                                 
                             </thead>
 
                             <tbody>
-                                <tr class="border-2 border-cyan">
-                                    <td class="table-td text-center font-bold">{index+1}</td>
-                                    <td class="table-td text-center font-bold">{data[0].student_name}</td>
-                                    <td class="table-td text-center font-bold">{data[0].markofQuiz}</td>
-                                    <td class="table-td text-center font-bold">{data[0].markofAssignment}</td>
-                                    <td class="table-td text-center font-bold">{data[0].totalMark}</td>
+                                <tr className="border-2 border-cyan">
+                                    <td className="table-td text-center font-bold">{index+1}</td>
+                                    <td className="table-td text-center font-bold">{data[0].student_name}</td>
+                                    <td className="table-td text-center font-bold">{data[0].markofQuiz}</td>
+                                    <td className="table-td text-center font-bold">{data[0].markofAssignment}</td>
+                                    <td className="table-td text-center font-bold">{data[0].totalMark}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -113,16 +113,16 @@ export default function Leaderboard(){
                     }
                     
 
-                    <div class="my-8">
-                        <h3 class="text-lg font-bold">Top 20 Result</h3>
-                        <table class="text-base w-full border border-slate-600/50 rounded-md my-4">
+                    <div className="my-8">
+                        <h3 className="text-lg font-bold">Top 20 Result</h3>
+                        <table className="text-base w-full border border-slate-600/50 rounded-md my-4">
                             <thead>
-                                <tr class="border-b border-slate-600/50">
-                                    <th class="table-th !text-center">Rank</th>
-                                    <th class="table-th !text-center">Name</th>
-                                    <th class="table-th !text-center">Quiz Mark</th>
-                                    <th class="table-th !text-center">Assignment Mark</th>
-                                    <th class="table-th !text-center">Total</th>
+                                <tr className="border-b border-slate-600/50">
+                                    <th className="table-th !text-center">Rank</th>
+                                    <th className="table-th !text-center">Name</th>
+                                    <th className="table-th !text-center">Quiz Mark</th>
+                                    <th className="table-th !text-center">Assignment Mark</th>
+                                    <th className="table-th !text-center">Total</th>
                                 </tr>
                             </thead>
 

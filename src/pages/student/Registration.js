@@ -55,43 +55,43 @@ export  default function Registration() {
     };
 
     return (
-        <section class="py-6 bg-primary h-screen grid place-items-center">
-            <div class="mx-auto max-w-md px-5 lg:px-0">
+        <section className="py-6 bg-primary h-screen grid place-items-center">
+            <div className="mx-auto max-w-md px-5 lg:px-0">
                 <div>
-                    <img class="h-12 mx-auto" src="../assets/image/learningportal.svg" />
-                    <h2 class="mt-6 text-center text-3xl font-extrabold text-slate-100">
+                    <img className="h-12 mx-auto" src="../assets/image/learningportal.svg" />
+                    <h2 className="mt-6 text-center text-3xl font-extrabold text-slate-100">
                         Create Your New Account
                     </h2>
                 </div>
-                <form class="mt-8 space-y-6" onSubmit={handleSubmit}>
+                <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
                     <input type="hidden" name="remember" value="true" />
-                    <div class="rounded-md shadow-sm -space-y-px">
+                    <div className="rounded-md shadow-sm -space-y-px">
                         <div>
-                            <label for="name" class="sr-only">Name</label>
+                            <label for="name" className="sr-only">Name</label>
                             <input id="name" name="name" type="name" autocomplete="name" required value={name} onChange={e=>setName(e.target.value)}
-                                class="login-input rounded-t-md" placeholder="Student Name" />
+                                className="login-input rounded-t-md" placeholder="Student Name" />
                         </div>
                         <div>
-                            <label for="email-address" class="sr-only">Email address</label>
+                            <label for="email-address" className="sr-only">Email address</label>
                             <input id="email-address" name="email" type="email" autocomplete="email" required value={email} onChange={e=>setEmail(e.target.value)}
-                                class="login-input " placeholder="Email address" />
+                                className="login-input " placeholder="Email address" />
                         </div>
                         <div>
-                            <label for="password" class="sr-only">Password</label>
+                            <label for="password" className="sr-only">Password</label>
                             <input id="password" name="password" type="password" autocomplete="current-password" required value={password} onChange={(e)=>setPassword(e.target.value)}
-                                class="login-input" placeholder="Password" />
+                                className="login-input" placeholder="Password" />
                         </div>
                         <div>
-                            <label for="confirm-password" class="sr-only">Confirm Password</label>
+                            <label for="confirm-password" className="sr-only">Confirm Password</label>
                             <input id="confirm-password" name="confirm-password" type="password"
-                                autocomplete="confirm-password" required class="login-input rounded-b-md" value={confirmPassword} onChange={(e)=>setConfirmPassword(e.target.value)}
+                                autocomplete="confirm-password" required className="login-input rounded-b-md" value={confirmPassword} onChange={(e)=>setConfirmPassword(e.target.value)}
                                 placeholder="Confirm Password" />
                         </div>
                     </div>
 
                     <div>
                         <button type="submit" disabled={isLoading}
-                            class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-violet-600 hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-violet-500">
+                            className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-violet-600 hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-violet-500">
                             Create Account
                         </button>
                     </div>

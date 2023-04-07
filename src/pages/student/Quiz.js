@@ -8,7 +8,7 @@ export default function Quiz(){
         <>
             <Navbar/>
             
-            <section class="py-6 bg-primary">
+            <section className="py-6 bg-primary">
                 <QuizCard/>
             </section>
             
