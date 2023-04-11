@@ -5,6 +5,41 @@ export const assignmentMarkApi = apiSlice.injectEndpoints({
         getAssignmentMarks: builder.query({
           query: () => '/assignmentMark?_sort=createdAt&_order=desc',
         }),
+        getInitialAssignmentMarks: builder.query({
+          query: () => `/assignmentMark?_sort=createdAt&_order=desc&_page=1&_limit=${process.env.REACT_APP_ITEMS_PER_URL}`,
+          transformResponse(apiResponse, meta) {
+            const totalCount = meta.response.headers.get("X-Total-Count");
+            return {
+                marks: apiResponse,
+                totalCount,
+            };
+        },
+        }),
+        getMoreAssignmentMarks: builder.query({
+          query: (page) => `/assignmentMark?_sort=createdAt&_order=desc&_page=${page}&_limit=${process.env.REACT_APP_ITEMS_PER_URL}`,
+          async onQueryStarted({ email }, { queryFulfilled, dispatch }) {
+              try {
+                  const conversations = await queryFulfilled;
+                  console.log(JSON.stringify(conversations?.data)+' here');
+                  if (conversations?.data?.length > 0) {
+                      // update conversation cache pessimistically start
+                      dispatch(
+                          apiSlice.util.updateQueryData(
+                              "getInitialAssignmentMarks",
+                              email,
+                              (draft) => {
+                                  return {
+                                      marks: conversations.data,
+                                      totalCount: Number(draft.totalCount),
+                                  };
+                              }
+                          )
+                      );
+                      // update messages cache pessimistically end
+                  }
+              } catch (err) {}
+          },
+      }),
         getAssignmentMarkById: builder.query({
           query: (id) => `/assignmentMark/${id}`,
         }),
@@ -70,6 +105,8 @@ export const assignmentMarkApi = apiSlice.injectEndpoints({
 export const { useGetAssignmentMarksQuery,
 useGetAssignmentMarkByAssignmentIdAndStudentIdQueryQuery,
 useGetAssignmentMarkByIdQuery,
+useGetInitialAssignmentMarksQuery,
+useGetMoreAssignmentMarksQuery,
 useGetAssignmentMarkByVideoIdQuery,
 useDeleteAssignmentMutation,
 useUpdateAssignmentMarkMutation,

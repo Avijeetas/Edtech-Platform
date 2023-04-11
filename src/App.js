@@ -32,7 +32,7 @@ function App() {
     <Router>
       <Routes>
         <Route path='/' element={<Login/>}/>
-        <Route path='/registration' element={<PublicRoute><Registration/></PublicRoute>}/>
+        <Route path='/registration' element={<Registration/>}/>
         <Route path='/courses' element={<PublicRoute><VideoPlayer/></PublicRoute>}/>
         <Route path='/video/:id' element={<PublicRoute><VideoPlayer/></PublicRoute>}/>
         <Route path='/leaderboard' element={<PublicRoute><Leaderboard/></PublicRoute>}/>
