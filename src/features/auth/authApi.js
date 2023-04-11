@@ -59,7 +59,7 @@ export const authApi = apiSlice.injectEndpoints({
                     );
                 } catch (err) {
                     // do nothing
-                    // console.log("error occurred");
+                    // // console.log("error occurred");
                 }
             },
         }),
@@ -80,7 +80,7 @@ export const authApi = apiSlice.injectEndpoints({
                     );
                 } catch (err) {
                     // do nothing
-                    // console.log("error occurred");
+                    // // console.log("error occurred");
                 }
             },
         }),

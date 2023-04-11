@@ -33,9 +33,9 @@ export default function AddQuiz() {
     function handleSubmit(event) {
       event.preventDefault();
       let selectedVideo = videos && videos.find(video =>video.id == videoId);
-      console.log(selectedVideo);
+      // console.log(selectedVideo);
 
-      console.log(options);
+      // console.log(options);
       createQuiz({
         question,
         video_id: videoId,

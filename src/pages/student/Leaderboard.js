@@ -35,7 +35,7 @@ export default function Leaderboard(){
                 totalMark : 0
               };
             }
-            console.log("student id ", student_id, curr);
+            // console.log("student id ", student_id, curr);
             
             acc[student_id] ={
                 ...acc[student_id],
@@ -68,7 +68,7 @@ export default function Leaderboard(){
           }, amByStudent);
           
           const sortedData = Object.values(totalSum).sort((a, b) => b.totalMark - a.totalMark);
-          console.log(sortedData);
+          // console.log(sortedData);
 
           index = sortedData.findIndex(item => item.student_id == id);
           data = sortedData.filter(item =>item.student_id==id);

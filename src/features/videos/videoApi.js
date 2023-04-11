@@ -34,7 +34,7 @@ export const videoApi = apiSlice.injectEndpoints({
                         )
                     )
                 } catch(err){
-                    console.log(err);
+                    // console.log(err);
                 }
             }
           }),
@@ -48,7 +48,7 @@ export const videoApi = apiSlice.injectEndpoints({
             async onQueryStarted({ id, data }, { queryFulfilled, dispatch }) {
               try {
                 const { data: updatedTask } = await queryFulfilled;
-                console.log(updatedTask);
+                // console.log(updatedTask);
           
                 // Update cache for getVideo
                 dispatch(
@@ -71,7 +71,7 @@ export const videoApi = apiSlice.injectEndpoints({
                   )
                 );
               } catch (err) {
-                console.log(err);
+                // console.log(err);
               }
             }
           }),

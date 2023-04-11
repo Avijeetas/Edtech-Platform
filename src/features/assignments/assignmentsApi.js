@@ -31,7 +31,7 @@ export const assignmentsApi = apiSlice.injectEndpoints({
                       )
                   )
               } catch(err){
-                  console.log(err);
+                  // console.log(err);
               }
           }
         }),
@@ -45,7 +45,7 @@ export const assignmentsApi = apiSlice.injectEndpoints({
           async onQueryStarted({ id, data }, { queryFulfilled, dispatch }) {
             try {
               const { data: updatedTask } = await queryFulfilled;
-              console.log(updatedTask);
+              // console.log(updatedTask);
         
               // Update cache for getassignment
               dispatch(
@@ -68,7 +68,7 @@ export const assignmentsApi = apiSlice.injectEndpoints({
                 )
               );
             } catch (err) {
-              console.log(err);
+              // console.log(err);
             }
           }
         }),

@@ -7,7 +7,7 @@ import { useGetQuizMarkByVideoIdAndStudentIdQuery } from "../../features/quizMar
 import { dateConversion } from "../../utils/dateConversion";
 export default function Video({video}){
     const {id, title, url, createdAt, description} = video || {}
-    console.log(url)
+    // console.log(url)
     const { user } = useSelector((state) =>state.auth) || {};
     const { id:userId } = user || {};
     const {data: quizzes, isLoading: isQuizLoaded, isError: quizError} = useGetQuizByVideoIdQuery(id) || {};

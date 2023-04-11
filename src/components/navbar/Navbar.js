@@ -11,7 +11,7 @@ export default function Navbar(){
     const { name, role } = user || {};
 
     const navigate = useNavigate();
-    // console.log("auth status", auth)
+    // // console.log("auth status", auth)
     
     const dispatch = useDispatch();
     const handleLogout = ()=>{

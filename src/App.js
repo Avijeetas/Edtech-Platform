@@ -25,7 +25,7 @@ import EditQuiz from './pages/admin/quizzes/EditQuiz';
 import AssignmentMarkList from './pages/admin/assignmentMark/AssignmentMarkList';
 function App() {
   const authChecked = useAuthCheck();
-  // console.log(authChecked);
+  // // console.log(authChecked);
   return !authChecked? 
   <div>....checking authentication</div>
   :(

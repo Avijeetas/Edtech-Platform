@@ -33,7 +33,7 @@ export const quizMarkApi = apiSlice.injectEndpoints({
                     )
                 )
             } catch(err){
-                console.log(err);
+                // console.log(err);
             }
         }
         }),
@@ -48,7 +48,7 @@ export const quizMarkApi = apiSlice.injectEndpoints({
           async onQueryStarted({ id, data }, { queryFulfilled, dispatch }) {
             try {
               const { data: updatedQuiz } = await queryFulfilled;
-              console.log(updatedQuiz);
+              // console.log(updatedQuiz);
         
               // Update cache for getquiz
               dispatch(
@@ -71,7 +71,7 @@ export const quizMarkApi = apiSlice.injectEndpoints({
                 )
               );
             } catch (err) {
-              console.log(err);
+              // console.log(err);
             }
           }
         }),

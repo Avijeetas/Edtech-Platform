@@ -15,7 +15,7 @@ export  default function Login() {
 
     useEffect(() => {
         const validRole =loginUser==undefined? true: loginUser?.user?.role=='student';
-        console.log(validRole);
+        // console.log(validRole);
         if(!validRole){
             setError('email or password does not match');
         } else {

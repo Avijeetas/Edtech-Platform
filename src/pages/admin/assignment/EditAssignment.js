@@ -9,7 +9,7 @@ import { useGetAllVideosQuery, useGetVideoQuery } from "../../../features/videos
 export default function EditAssignment(){
     const {id} = useParams();
     const {data: assignment,  isLoading: dataLoading, error : dataError} = useGetAssignmentsByIdQuery(id) 
-    console.log(assignment?.title);
+    // console.log(assignment?.title);
     const [formTitle, _] = useState('Edit Assignment')
     const [title, setTitle] = useState('');
     const [videoTitle, setVideoTitle] = useState('');
@@ -35,7 +35,7 @@ export default function EditAssignment(){
     const handleSubmit = (e) =>{
         e.preventDefault();
         let selectedVideo = videos && videos.find(video =>video.id == videoId);
-        console.log(selectedVideo);
+        // console.log(selectedVideo);
         
         updateAssignments({
             id,

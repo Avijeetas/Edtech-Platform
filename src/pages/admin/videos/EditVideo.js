@@ -8,7 +8,7 @@ export default function EditVideo(){
     
     const {id} = useParams()
     const {data: video, isError: fetchingError} = useGetVideoQuery(id) || {};
-    console.log(video)
+    // console.log(video)
 
     const [formTitle, setFormTitle] = useState('Edit Video')
     const [title, setTitle] = useState(video?.title)

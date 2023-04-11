@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function RelatedVideos({videos, videoId}){
 
     let content = null;
-    console.log(videos, videoId, ' hello');
+    // console.log(videos, videoId, ' hello');
 
     if(videos?.length>0){
         content = videos.map(video=>{

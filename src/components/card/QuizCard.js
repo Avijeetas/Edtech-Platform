@@ -22,7 +22,7 @@ export default function QuizCard() {
     isError 
   } = useGetVideoQuery(videoId);
 
-  // console.log(video)
+  // // console.log(video)
   const [createQuizMark, {isLoading: quizCreate, isError: submissionError, error:reason}] = useCreateQuizMarkMutation();
   const [selectedOptions, setSelectedOptions] = useState({});
 

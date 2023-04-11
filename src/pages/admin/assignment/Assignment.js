@@ -6,7 +6,7 @@ export default function Assignment({assignment}){
     const {id, title, video_title, totalMark} = assignment
     const [deleteAssignments, {isError}] = useDeleteAssignmentsMutation();
 
-    console.log(assignment)
+    // console.log(assignment)
     const deleteItem = (id) =>{
         deleteAssignments(id);
     }

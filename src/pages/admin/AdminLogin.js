@@ -15,7 +15,7 @@ export default function AdminLogin(){
 
     useEffect(() => {
         const validRole =data==undefined? true: data?.user?.role=='admin';
-        console.log(validRole);
+        // console.log(validRole);
         if(!validRole){
             setError('email or password does not match');
         } else {
@@ -25,7 +25,7 @@ export default function AdminLogin(){
             setError(responseError.data);
         }
         if (validRole && data?.accessToken && data?.user) {
-            // console.log("logged in");
+            // // console.log("logged in");
             navigate("/admin/dashboard")
         }
     }, [data, responseError, navigate]);

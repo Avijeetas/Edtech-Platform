@@ -9,8 +9,8 @@ export default function Assignment(){
     const {data: assignments, isLoading: isAssignmentLoaded, isError: assignmentsError} = useGetAssignmentsByIdQuery(id);
     const [createAssignmentMark, {isError: submissionError, isLoading, isSuccess}] = useCreateAssignmentMarkMutation();
     const { user } = useSelector((state) =>state.auth) || {};
-    // console.log(user);
-    // console.log(assignments)
+    // // console.log(user);
+    // // console.log(assignments)
     const [repo, setRepo] = useState("");
     const navigate =useNavigate();
     useEffect(()=>{

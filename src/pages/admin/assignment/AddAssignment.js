@@ -27,7 +27,7 @@ export default function AddAssignment(){
     const handleSubmit = (e) =>{
         e.preventDefault();
         let selectedVideo = videos && videos.find(video =>video.id == videoId);
-        console.log(selectedVideo);
+        // console.log(selectedVideo);
         
         setVideoTitle(selectedVideo.title)
         createAssignments({

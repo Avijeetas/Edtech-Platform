@@ -10,7 +10,7 @@ export default function EditQuiz() {
     const {id}= useParams();
 
     const {data: quiz,  isLoading: dataLoading, error : dataError} = useGetQuizByIdQuery(id) || {} 
-    console.log(quiz);
+    // console.log(quiz);
     const [formTitle, setFormTitle]= useState("Edit Quiz")
     const [question, setQuestion] = useState(quiz?.question);
     const [videoId, setVideoId] = useState(quiz?.video_id);
@@ -33,9 +33,9 @@ export default function EditQuiz() {
     function handleSubmit(event) {
       event.preventDefault();
       let selectedVideo = videos && videos.find(video =>video.id == videoId);
-      console.log(selectedVideo);
+      // console.log(selectedVideo);
 
-      console.log(options);
+      // console.log(options);
       updateQuiz({
         id ,
         updatedQuiz: {

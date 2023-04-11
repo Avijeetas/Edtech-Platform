@@ -20,7 +20,7 @@ export const assignmentMarkApi = apiSlice.injectEndpoints({
           async onQueryStarted({ email }, { queryFulfilled, dispatch }) {
               try {
                   const conversations = await queryFulfilled;
-                  console.log(JSON.stringify(conversations?.data)+' here');
+                  // console.log(JSON.stringify(conversations?.data)+' here');
                   if (conversations?.data?.length > 0) {
                       // update conversation cache pessimistically start
                       dispatch(
@@ -66,7 +66,7 @@ export const assignmentMarkApi = apiSlice.injectEndpoints({
           async onQueryStarted({ id, data }, { queryFulfilled, dispatch }) {
             try {
               const { data: updatedmark } = await queryFulfilled;
-              console.log(updatedmark);
+              // console.log(updatedmark);
         
               // Update cache for getassignment
               dispatch(
@@ -89,7 +89,7 @@ export const assignmentMarkApi = apiSlice.injectEndpoints({
                 )
               );
             } catch (err) {
-              console.log(err);
+              // console.log(err);
             }
           }
         }),
